@@ -14,13 +14,13 @@ function changeColor(div) {
     div.style.backgroundColor = color; // change the background color of the div
 }
 function makedarker(div){
-    div.style.filter = "brightness(+0.5)";
+    div.style.filter.brightness = 0.7;
 }
 function addHoverEffect() {
     let squares = document.getElementById("grid-container").children;
     for (let index = 0; index < squares.length; index++) {
         squares[index].addEventListener("mouseover", function(){
-            makedarker(this);
+            changeColor(this);
         })
         
     }
